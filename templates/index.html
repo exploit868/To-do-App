@@ -1,0 +1,54 @@
+{%extends 'base.html' %}
+{%load static%}
+
+{%block content%}
+<h1 class="header-h1-update">To Do List</h1>
+<div class="container">
+    <form action="/" method="post">
+        {%csrf_token%}
+  {%for field in form.title %}
+  {{field}}
+  {%endfor%}
+       <span><input type="submit" class="btn" name="Create Task" value="submit"></span> 
+    </form>
+    <h3>Not Completed</h3>
+
+    <div class="notcomp">
+        {%for task in task%}
+
+    <div class="task">
+
+       
+        {% if task.complete == False %}
+       
+        </a>
+        <span>{{task}}</span>
+        <a href="{% url 'delete' task.id %}"><i class="fa fa-trash-alt"></i>
+        <a href="{% url 'update' task.id %}"><i class="fas fa-check"></i></a>
+        {%endif%}
+        </div>
+        {%endfor%}
+
+    </div>
+
+   
+    <h3>Completed</h3>
+    <div class="comp">
+        {%for task in task%}
+
+    <div class="task">
+       
+
+        {% if task.complete == True %}
+     
+        <span>{{task}}</span>
+        <a href="{% url 'delete' task.id %}"><i class="fa fa-trash-alt"></i>
+        <a href="{% url 'update' task.id %}"><i class="fas fa-check"></i></a>
+        {%endif%}
+    </div>
+    {%endfor%}
+
+    </div>
+
+</div>
+{%endblock%}

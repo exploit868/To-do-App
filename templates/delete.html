@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{%block content%}
+<div class="contain-delete">
+    <p class="delete">Are you sure you want to delete "{{item}}"? </p>
+   
+    <a class="cancel" href="{% url 'index' %}">Cancel</a>
+    <form action="" method="POST">
+        {% csrf_token%}
+        <input class="btn btn-delete" type="submit" value="Confirm">
+
+    </form>
+</div>
+
+{%endblock%}

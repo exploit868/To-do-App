@@ -1,0 +1,96 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+
+}
+
+body{
+
+background-image: linear-gradient(120deg, #487eb0,rgb(141, 28, 28)) ;
+min-width: 100vh;
+}
+
+.container{
+  
+    margin:auto ;
+    max-width: 880px;
+    padding: 10px;
+
+}
+
+.txt{
+    margin-top: 100px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    background: none;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+
+
+}
+
+h3{
+    margin: 10px 0;
+
+}
+
+
+.task span{
+    display: block;
+    width:100% ;
+    margin: 6px 0;
+    overflow: hidden;
+    padding: 10px;
+    background: rgba(255, 255, 255, 255);
+
+}
+
+.task i{
+    color: black;
+    float: right;
+    margin-left: 20px ;
+    cursor: pointer;
+
+}
+.btn{
+    margin: 10px;
+    border: none;
+    color: #fff;
+    background-color: #000000;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.header-h1-update{
+    margin-top:10px;
+    color: #fff;
+    text-align: center;
+}
+.delete{
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.cancel{
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    color: #fff;
+}
+.contain-delete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

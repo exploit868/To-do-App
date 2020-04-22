@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+    <h1 class="header-h1-update">Update Task</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        {%for field in form %} 
+        {{field}}
+        {%endfor%}
+        <span>Check Box To Complete</span>
+        <input  class='btn' type="submit" name="Update Task" id="update" value="Update">
+    </form>
+    
+{%endblock%}
